@@ -22,7 +22,7 @@ namespace Mango.Web.Services
 			});
 		}
 
-		public async Task<T> DeleteProduct<T>(int id)
+		public async Task<T> DeleteProductAsync<T>(int id)
 		{
 			return await this.SendAsync<T>(new ApiRequest()
 			{
@@ -44,7 +44,7 @@ namespace Mango.Web.Services
 			});
 		}
 
-		public async Task<T> GetProductById<T>(int id)
+		public async Task<T> GetProductByIdAsync<T>(int id)
 		{
 			return await this.SendAsync<T>(new ApiRequest()
 			{
@@ -56,7 +56,7 @@ namespace Mango.Web.Services
 
 		}
 
-		public async Task<T> UpdateProduct<T>(ProductDto productDto)
+		public async Task<T> UpdateProductAsync<T>(ProductDto productDto)
 		{
 			return await this.SendAsync<T>(new ApiRequest()
 			{
