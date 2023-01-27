@@ -11,7 +11,7 @@ namespace Mango.Web.Services
 			_clientFactory= clientFactory;
 		}
 
-		public async Task<T> CreateProduct<T>(ProductDto productDto)
+		public async Task<T> CreateProductAsync<T>(ProductDto productDto)
 		{
 			return await this.SendAsync<T>(new ApiRequest()
 			{
