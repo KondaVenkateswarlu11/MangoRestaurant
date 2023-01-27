@@ -59,13 +59,13 @@ namespace Mango.Web.Services
 			}
 			catch (Exception ex)
 			{
-				var Dto = new ResponseDto
+				var dto = new ResponseDto
 				{
 					DisplayMessage = "Error",
 					ErrorMessages = new List<string> { Convert.ToString(ex.Message) },
 					IsSuccess = false
 				};
-				var res = JsonConvert.SerializeObject(Dto);
+				var res = JsonConvert.SerializeObject(dto);
 				var apiResponseDto = JsonConvert.DeserializeObject<T>(res);
 				return apiResponseDto;
 			}

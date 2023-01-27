@@ -12,6 +12,8 @@ SD.ProductAPIBase = builder.Configuration["ServiceUrls:ProductAPI"];
 
 builder.Services.AddScoped<IProductService, ProductService>();
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
